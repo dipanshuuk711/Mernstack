@@ -3,6 +3,7 @@ const Product = require("../models/Product")
 const {verifyToken, verifyTokenAdmin} = require('../middlewares/verifyToken')
 
 // get all
+//Fix Verify Token Middleware here 
 productController.get('/', verifyToken, async(req, res) => {
     try {
         const products = await Product.find(req.query)
